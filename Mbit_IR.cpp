@@ -9,7 +9,7 @@
 #include <vector>
 #include "ReceiverIR.h"
 using namespace pxt;
-typedef vector<Action> vA;
+typedef std::vector<Action> vA;
 
 
 
@@ -64,8 +64,8 @@ enum class RemoteButton {
 //% block="Tinybit_IR_V1.5"
 namespace Mbit_IR { 
 
-    map<RemoteButton, vA> actions;
-    map<RemoteButton, uint32_t> lastact;
+    std::map<RemoteButton, vA> actions;
+    std::map<RemoteButton, uint32_t> lastact;
     Timer tsb; 
     uint8_t buf[32];
     uint32_t now;
